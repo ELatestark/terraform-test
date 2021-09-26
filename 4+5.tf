@@ -177,6 +177,7 @@ resource "aws_instance" "instance_bastion" {
               #!/bin/bash
               adduser teacher
               usermod -a -G wheel teacher
+              echo teacher ALL=(ALL) NOPASSWD: ALL >> /etc/sudoers
               mkdir /home/teacher/.ssh
               chown teacher:teacher /home/teacher/.ssh
               chmod 700 /home/teacher/.ssh
@@ -203,6 +204,7 @@ resource "aws_instance" "instance_privaza" {
               #!/bin/bash
               adduser teacher
               usermod -a -G wheel teacher
+              echo teacher ALL=(ALL) NOPASSWD: ALL >> /etc/sudoers
               mkdir /home/teacher/.ssh
               chown teacher:teacher /home/teacher/.ssh
               chmod 700 /home/teacher/.ssh
