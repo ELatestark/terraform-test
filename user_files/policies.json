@@ -32,7 +32,7 @@
                 "arn:aws:ec2:*:*:volume/*"
             ],
             "Condition": {
-                "ForAnyValue:StringEquals": {
+                "ForAllValues:StringEquals": {
                     "aws:TagKeys": [
                         "Owner",
                         "Project",
